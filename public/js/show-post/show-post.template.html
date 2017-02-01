@@ -1,0 +1,8 @@
+<div ng-repeat="post in $ctrl.posts">
+  <p>{{post.title}}</p>
+  <img src="{{post.item_image}}"/>
+  <p>{{post.description}}</p>
+  <p>{{post.price}}</p>
+  <button type="button" name="button">Delete</button>
+  <button ui-sref="editPost" type="button" name="button">Edit</button>
+</div>
