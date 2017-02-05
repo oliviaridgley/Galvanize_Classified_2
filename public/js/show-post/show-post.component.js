@@ -16,9 +16,8 @@
     vm.posts = [];
 
     function onInit() {
-      console.log('I am running, too');
+      // console.log('I am running, too');
       $http.get('/classifieds').then(function(response) {
-        console.log(response);
         vm.posts = response.data;
       });
     }

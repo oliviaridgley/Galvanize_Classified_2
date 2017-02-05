@@ -1,6 +1,8 @@
 (function() {
   'use strict'
+
   console.log("CONFIG");
+
   angular.module('app')
     .config(config)
 
@@ -27,11 +29,11 @@
         url: '/create-post',
         component: 'createPost',
       })
-    // .state({
-    //   name: 'editPost',
-    //   parent: 'app',
-    //   url: '/edit-post',
-    //   component: 'editPost',
-    // });
+      .state({
+        name: 'editPost',
+        parent: 'app',
+        url: '/edit-post/:editId',
+        component: 'editPost',
+      });
   }
 }());

@@ -8,20 +8,23 @@
       templateUrl: "/js/create-post/create-post.template.html"
     });
 
-  controller.$inject = ['$http']
+  controller.$inject = ['$http', '$state']
 
-  function controller($http) {
+  function controller($http, $state) {
     const vm = this;
-    vm.$onInit = onInit;
+    vm.newPost = newPost;
 
 
-    function onInit() {
-      console.log('I am running, as well');
-      $http.get('/classifieds').then(function(response) {
-        console.log(response);
-        vm.posts = response.data;
-      });
+    function newPost() {
+      // console.log('I am running, as well');
+      $http.post('/classifieds', vm.post)
+        .then(function(response) {
+          delete vm.post;
+          $state.go('showPost')
+        });
     }
   }
+
+
 
 }())
