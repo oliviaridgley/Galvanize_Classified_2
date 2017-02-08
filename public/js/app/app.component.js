@@ -10,9 +10,12 @@
   function controller() {
     const vm = this;
 
+
     vm.$onInit = function() {
-      // console.log('I am running');
-    }
+
+    };
+
+
   }
 
-}())
+}());

@@ -22,10 +22,9 @@ You are responsible for:
 
 The app should do the following:
 
-- Display all of the ads
-- Post a new ad
-- Edit existing ads
-- Delete an ad
-- Filter ads (titles and descriptions)
-- Sort ads based on posting date and price
-
+- Display all of the ads x
+- Post a new ad x
+- Edit existing ads x
+- Delete an ad x
+- Filter ads (titles and descriptions) x
+- Sort ads based on posting date and price x

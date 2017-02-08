@@ -13,8 +13,8 @@
   function controller($http, $state, $stateParams) {
     const vm = this
 
-    const $onInit = onInit;
-    const $updatePost = updatePost;
+    vm.$onInit = onInit;
+    vm.updatePost = updatePost;
     console.log($stateParams.editId);
 
     function onInit() {
@@ -22,12 +22,12 @@
         .then(function(response) {
           console.log(response.data);
           vm.post = response.data;
-
+          console.log(vm.post);
         });
     }
 
-    function updatePost() {
-      console.log(post.id);
+    function updatePost(post) {
+      console.log(post);
       $http.patch(`/classifieds/${$stateParams.editId}`, vm.post)
         .then(function(response) {
           $state.go('showPost');
